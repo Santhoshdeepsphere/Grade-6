@@ -1,0 +1,70 @@
+import streamlit as vAR_st
+from PIL import Image
+from streamlit_option_menu import option_menu
+import datatype as dt
+import roundingoff as ro
+import calculator as calc
+import bmi as bi
+import pyautogui
+
+vAR_st.set_page_config(page_title="My Webpage", page_icon="ds.png", layout='wide')
+
+#for creating the side menu
+with vAR_st.sidebar:
+    vAR_selected=vAR_st.selectbox("Menu",('Data type', 'Rounding Off','Arithmetic Operation','BMI'))
+    vAR_lib=vAR_st.selectbox("",("Libraries","Streamlit","Pillow"))
+    if vAR_st.button("Clear/Reset"):
+        pyautogui.hotkey("ctrl","F5")
+        
+    
+
+        
+
+col1, col2, col3 = vAR_st.columns([3,5,3])
+with col1:
+    vAR_st.write('')
+with col2:
+    vAR_st.image('https://raw.githubusercontent.com/tarun243/Streamlit-commonToAllIndustry/master/Web_app/Logo_final.png')
+with col3:
+    vAR_st.write('')
+
+vAR_st.markdown("<h1 style='text-align: center; color: black; font-size:29px;'>Applied AI for Schools - 6th Grade</h1>", unsafe_allow_html=True)
+vAR_st.markdown("<p style='text-align: center; color: blue; font-size:29px;'>Simple applications built on Streamlit</p>", unsafe_allow_html=True)
+if vAR_selected=="Data type":
+    vAR_st.markdown("<p style='text-align: center; color: black; font-size:20px;'><span style='font-weight: bold'>Problem Statement: </span>Application to find the data type</p>", unsafe_allow_html=True)
+if vAR_selected=="Rounding Off":
+    vAR_st.markdown("<p style='text-align: center; color: black; font-size:20px;'><span style='font-weight: bold'>Problem Statement: </span>Rounding Off the numbers</p>", unsafe_allow_html=True)
+if vAR_selected=="Arithmetic Operation":
+    vAR_st.markdown("<p style='text-align: center; color: black; font-size:20px;'><span style='font-weight: bold'>Problem Statement: </span>Application for basic arithmetic operations</p>", unsafe_allow_html=True)
+if vAR_selected=="BMI":
+    vAR_st.markdown("<p style='text-align: center; color: black; font-size:20px;'><span style='font-weight: bold'>Problem Statement: </span>Application to calculate BMI</p>", unsafe_allow_html=True)
+#for horizontal line
+vAR_st.markdown("""
+<hr style="width:100%;height:3px;background-color:gray;border-width:10">
+""", unsafe_allow_html=True)
+
+#for opening the css file
+with open('style.css') as f:
+    vAR_st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+#-------------------------------------------------------------------------------------------------------------
+
+if __name__=="__main__":
+    try:
+        if vAR_selected=='Data type':
+            dt.datatype()
+
+        if vAR_selected=='Rounding Off':
+            ro.roundup()
+
+        if vAR_selected=='Arithmetic Operation':
+            calc.calculator()
+
+        if vAR_selected=='BMI':
+            bi.BMI()
+
+    except BaseException as error:
+        print("Error Message",error)
+        vAR_st.write(error)
+
+#-----------------------------------------------------------------------------------------------------------------
