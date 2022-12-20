@@ -62,6 +62,7 @@ if vAR_selected=="OddEven, Quotient and Remainder":
 vAR_st.markdown("""<style>.css-1d391kg, .e1fqkh3o1 {
     background-color: #4c85e4;
     width: 19rem;
+}
 
 
 
