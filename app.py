@@ -58,6 +58,47 @@ if vAR_selected=="Sorting order":
 if vAR_selected=="OddEven, Quotient and Remainder":
     vAR_st.markdown("<p font='IBM Flex Sans'; style='text-align: center; color: black; font-size:20px;'><span style='font-weight: bold'>Problem Statement: </span>Application to find ODD or EVEN, Quotient and Remainder</p>", unsafe_allow_html=True)
 
+#for background color of sidebar
+vAR_st.markdown("""<style>.css-1d391kg, .e1fqkh3o1 {
+    background-color: #4c85e4;
+    width: 19rem;
+}
+</style>""", unsafe_allow_html=True)
+
+
+#for clear/reset button
+vAR_st.markdown("""<style>.button  
+{
+    background-color:rgb(47 236 106);  
+    top: 40px; 
+    border: 0px solid; 
+    padding: 10px;
+    border-radius:3px; }
+</style>""", unsafe_allow_html=True)
+
+
+#for clear/reset button
+vAR_st.markdown("""<style>p, ol, ul, dl {
+    margin: 0px 80px 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+</style>""", unsafe_allow_html=True)
+
+vAR_st.markdown("""<style>a {
+    text-decoration: none;
+}
+</style>""", unsafe_allow_html=True)
+
+
+#To customize the background colour of the submit button  
+m = vAR_st.markdown("""
+<style>
+div.stButton > button:first-child {border: 1px solid; width: 55%;
+    background-color: rgb(47 236 106) ;
+}
+</style>""", unsafe_allow_html=True)
+    
 #for horizontal line
 vAR_st.markdown("""
 <hr style="width:100%;height:3px;background-color:gray;border-width:10">
