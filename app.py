@@ -58,12 +58,7 @@ if vAR_selected=="Sorting order":
 if vAR_selected=="OddEven, Quotient and Remainder":
     vAR_st.markdown("<p font='IBM Flex Sans'; style='text-align: center; color: black; font-size:20px;'><span style='font-weight: bold'>Problem Statement: </span>Application to find ODD or EVEN, Quotient and Remainder</p>", unsafe_allow_html=True)
 
-#for background color of sidebar
-vAR_st.markdown("""<style>.css-1d391kg, .e1fqkh3o1 {
-    background-color: #4c85e4;
-    width: 19rem;
-}
-</style>""", unsafe_allow_html=True)
+
 
 
 #for clear/reset button
@@ -79,7 +74,7 @@ vAR_st.markdown("""<style>.button
 
 #for clear/reset button
 vAR_st.markdown("""<style>p, ol, ul, dl {
-    margin: 0px 80px 1rem;
+    margin: 10px 80px 1rem;
     font-size: 1rem;
     font-weight: 400;
 }
